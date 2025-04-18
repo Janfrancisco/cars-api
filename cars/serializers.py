@@ -18,6 +18,9 @@ class CarModelSerializer(serializers.ModelSerializer):
 
 
 class CarNamesModelSerializer(serializers.ModelSerializer):
+    """
+        Retorna o nome do proprietário e a marca do carro ao invés de retornar as suas 'ids'
+    """
     brand = serializers.SerializerMethodField()
     owner = serializers.SerializerMethodField()
 
